@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>User Dashboard | SCM</title>
+</head>
+<body>
+	<section>
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-8">
+
+					<div class="card">
+
+						<div class="card-body">
+
+							<h3 class="my-3">Change password</h3>
+							
+							<!--  <div th:if="${message}" th:classappend="${message.type}" class="alert" role="alert">
+                                  <p class="text-center" th:text="${message.content}"></p> </div> -->
+
+							<form action="" th:action=@{/user/change-password} method="post" >
+
+								<!-- old password field -->
+								<div class="mb-2 form-group">
+									<label for="old_pwd-field" class="form-label">	</label> <input
+										name="oldpwd" type="password" class="form-control"
+										id="old_pwd-field" aria-describedby="emailHelp"
+										placeholder="Enter Old password" required />
+									
+								</div>
+								<div class="mb-4 form-group">
+									<label for="new_pwd-field" class="form-label">	</label> <input
+										name="newpwd" type="password" class="form-control"
+										id="new_pwd-field" aria-describedby="emailHelp"
+										placeholder="Enter new password" required />
+									
+								</div>
+								
+								<div class="container">
+								<button type="submit" class="btn btn-success">Change</button>
+								<button  type="reset" class="btn btn-warning">Reset</button>
+								
+								</div>
+
+							</form>
+
+						</div>
+
+					</div>
+
+
+				</div>
+
+			</div>
+		</div>
+
+
+
+	</section>
+</body>
+</html>
